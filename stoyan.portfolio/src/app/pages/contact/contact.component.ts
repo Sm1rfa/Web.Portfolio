@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+
+import { Contact, ContactService } from './contact.service';
 
 @Component({
     selector:'app-contact',
@@ -9,15 +12,29 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class ContactComponent implements OnInit {
 
+    contact: Contact;
+    from:string;
+    subject:string;
+    message:string;
     imagePath: string;
     clickMessage = '';
 
-    constructor() {
+    constructor(private service:ContactService) {
         this.imagePath = '/assets/images/email.png';
     }
 
     onClickMe() {
         this.clickMessage = "You are my hero!";
+    }
+
+    sendClick() {
+        this.contact = new Contact(this.from, this.subject, this.message);
+        this.service.sendMail(this.contact);
+        console.log(this.from);
+    }
+
+    testCall() {
+        this.service.testCall();
     }
 
     ngOnInit(){}

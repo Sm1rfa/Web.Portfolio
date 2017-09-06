@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule, MdGridListModule } from '@angular/material';
@@ -16,6 +17,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/notfound/page-not-found.component';
 
+import { ContactService } from './pages/contact/contact.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,8 @@ import { PageNotFoundComponent } from './pages/notfound/page-not-found.component
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    //Contact
   ],
   imports: [
     BrowserModule,
@@ -37,9 +41,10 @@ import { PageNotFoundComponent } from './pages/notfound/page-not-found.component
     MdToolbarModule,
     MdIconModule,
     MdInputModule,
-    MdGridListModule
+    MdGridListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

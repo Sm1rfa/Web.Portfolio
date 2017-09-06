@@ -1,7 +1,7 @@
-<!-- <form class="contact-form">
+<form class="contact-form">
     <p> 
         <md-input-container>
-            <input mdInput placeholder="Email" value="" required>
+            <input mdInput type="text" name="from" placeholder="Email" [(ngModel)]="from" value="" required>
         </md-input-container>
     </p>
     <p>
@@ -11,26 +11,18 @@
     </p>
     <p>
         <md-input-container>
-            <input mdInput placeholder="Subject" value="" required>
+            <input mdInput type="text" name="subject" placeholder="Subject" [(ngModel)]="subject" value="" required>
         </md-input-container>
     </p>
     <p>
         <md-input-container class="contact-full-width">
-            <textarea mdInput placeholder="Message" value="" resizeToFitContent required></textarea>
+            <textarea mdInput type="text" name="message" placeholder="Message" [(ngModel)]="message" value="" resizeToFitContent required></textarea>
         </md-input-container>
     </p>
     <p> 
-       <button md-raised-button (click)="onClickMe()">Send</button>
-       {{ clickMessage }}
+       <button md-raised-button (click)="sendClick()">Send</button>
     </p>
-</form> -->
-
-<!-- temporary solution -->
-<p>You can contact me via email</p>
-<p> <a href="mailto:contact@sbonchev.eu"> contact@sbonchev.eu </a> </p>
-
-<div class="row">
-    <div class="col-xs-12">
-        <img [src]="imagePath" height="250">
-    </div>
-</div>
+</form>
+<!-- <p> 
+    <button md-raised-button (click)="testCall()">test</button>
+ </p> -->
