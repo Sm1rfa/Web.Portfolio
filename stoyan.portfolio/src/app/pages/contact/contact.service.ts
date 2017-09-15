@@ -21,6 +21,8 @@ export class ContactService {
         let options = new RequestOptions({ headers: headers });
         let fromBody = JSON.stringify(contact);
 
+        var responseText = "";
+
         this.http.post(baseUrl, fromBody, options)
         .subscribe();
     }

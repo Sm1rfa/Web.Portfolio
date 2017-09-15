@@ -1,124 +1,61 @@
 <md-list class="list-container">
-        <md-list-item>
-                <ul> 
-                        <li *ngFor="let skill of DOTNETSKILLS"> 
-                            {{ skill }}
-                        </li>
-                    </ul>
-        </md-list-item>
-        <md-list-item> 
-                <ul> 
-                        <li *ngFor="let db of DATABASES"> 
-                            {{ db }}
-                        </li>
-                    </ul>
-        </md-list-item>
-        <md-list-item> 
-                <ul> 
-                        <li *ngFor="let java of JAVASKILLS"> 
-                            {{ java }}
-                        </li>
-                    </ul>
-        </md-list-item>
-        <md-list-item> 
-                <ul> 
-                        <li *ngFor="let web of WEBTECH"> 
-                            {{ web }}
-                        </li>
-                    </ul>
-        </md-list-item>
-        <md-list-item> 
-                <ul> 
-                        <li *ngFor="let mob of MOBILEDEV"> 
-                            {{ mob }}
-                        </li>
-                    </ul>
-        </md-list-item>
-        <md-list-item> 
-                <ul> 
-                        <li *ngFor="let oth of OTHER"> 
-                            {{ oth }}
-                        </li>
-                    </ul>
-        </md-list-item>
+    <md-list-item>
+        <ul> 
+            <li *ngFor="let skill of dotNetSkills"> 
+                {{ skill.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='skill.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
+
+    <md-list-item> 
+        <ul> 
+            <li *ngFor="let db of databaseSkills"> 
+                {{ db.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='db.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
+
+    <md-list-item> 
+        <ul> 
+            <li *ngFor="let java of javaSkills"> 
+                {{ java.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='java.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
+
+    <md-list-item> 
+        <ul> 
+            <li *ngFor="let web of webtechSkills"> 
+                {{ web.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='web.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
+
+    <md-list-item> 
+        <ul> 
+            <li *ngFor="let mob of mobiledevSkills"> 
+                {{ mob.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='mob.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
+
+    <md-list-item> 
+        <ul> 
+            <li *ngFor="let oth of otherSkills"> 
+                {{ oth.name }}
+                <md-progress-bar class="progressbar" mode="determinate" color='primary' [value]='oth.progress'></md-progress-bar>
+                <label> 100% </label>
+            </li>
+        </ul>
+    </md-list-item>
 </md-list>
-
-<!-- <md-grid-list cols="5" rowHeight="1:2">
-<md-grid-tile>
-<md-card>
-        <md-card-title> .NET Framework </md-card-title>
-        <md-card-content>
-        <ul> 
-            <li *ngFor="let skill of DOTNETSKILLS"> 
-                {{ skill }}
-            </li>
-        </ul>
-    </md-card-content>
-</md-card>
-</md-grid-tile>
-
-<md-grid-tile>
-<md-card>
-        <md-card-title> Databases </md-card-title>
-        <md-card-content>
-        <ul> 
-            <li *ngFor="let db of DATABASES"> 
-                {{ db }}
-            </li>
-        </ul>
-    </md-card-content>
-</md-card>
-</md-grid-tile>
-
-<md-grid-tile>
-<md-card>
-    <md-card-title> Java </md-card-title>
-    <md-card-content>
-    <ul> 
-        <li *ngFor="let java of JAVASKILLS"> 
-            {{ java }}
-        </li>
-    </ul>
-</md-card-content>
-</md-card>
-</md-grid-tile>
-
-<md-grid-tile>
-<md-card>
-    <md-card-title> Web technologies </md-card-title>
-    <md-card-content>
-    <ul> 
-        <li *ngFor="let web of WEBTECH"> 
-            {{ web }}
-        </li>
-    </ul>
-</md-card-content>
-</md-card>
-</md-grid-tile>
-
-<md-grid-tile>
-<md-card>
-    <md-card-title> Mobile technologies </md-card-title>
-    <md-card-content>
-    <ul> 
-        <li *ngFor="let mob of MOBILEDEV"> 
-            {{ mob }}
-        </li>
-    </ul>
-</md-card-content>
-</md-card>
-</md-grid-tile>
-
-<md-grid-tile>
-<md-card>
-    <md-card-title> Other </md-card-title>
-    <md-card-content>
-    <ul> 
-        <li *ngFor="let oth of OTHER"> 
-            {{ oth }}
-        </li>
-    </ul>
-</md-card-content>
-</md-card>
-</md-grid-tile>
-</md-grid-list> -->

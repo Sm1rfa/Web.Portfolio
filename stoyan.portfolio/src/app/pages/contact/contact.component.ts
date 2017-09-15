@@ -31,6 +31,10 @@ export class ContactComponent implements OnInit {
         this.contact = new Contact(this.from, this.subject, this.message);
         this.service.sendMail(this.contact);
         console.log(this.from);
+        this.from = '';
+        this.subject = '';
+        this.message = '';
+        alert('Your email has been sent!');
     }
 
     testCall() {

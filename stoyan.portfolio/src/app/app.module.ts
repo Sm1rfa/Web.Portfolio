@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule, MdGridListModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule, MdGridListModule, MdProgressBarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RouteModule } from './route.module';
@@ -42,6 +42,7 @@ import { ContactService } from './pages/contact/contact.service';
     MdIconModule,
     MdInputModule,
     MdGridListModule,
+    MdProgressBarModule,
     HttpClientModule
   ],
   providers: [ContactService],
