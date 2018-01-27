@@ -26,3 +26,9 @@ h1 {
   img {
     height: 50px;
 }
+
+.mainBar img {
+  float: right;
+  width: 100px;
+  height: 100px;
+}
